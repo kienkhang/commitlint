@@ -9,8 +9,8 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "test": "vitest --dom",
-    "test:unit": "vitest --run --reporter verbose",
-    "test:coverage": "vitest run --coverage"
+    "test:unit": "vitest --run --dom --reporter verbose",
+    "test:coverage": "vitest run --dom --coverage"
   },
   "dependencies": {
     "node-sass": "^7.0.3",
