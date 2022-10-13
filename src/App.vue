@@ -3,10 +3,17 @@
   // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
   import HelloWorld from './components/HelloWorld.vue'
   import Button from './components/Button.vue'
+  import FormDetail from './components/FormDetail.vue'
 </script>
 
 <template>
-  <div>
+  <div class="w-full">
+    <!-- <div class="w-6/12 m-auto mt-10 border border-sky-500 rounded-md p-10">
+      <FormDetail />
+    </div> -->
+    <router-view />
+  </div>
+  <!-- <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
@@ -15,7 +22,7 @@
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
-  <Button></Button>
+  <Button></Button> -->
 </template>
 
 <style scoped>
