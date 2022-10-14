@@ -69,7 +69,7 @@
 <script setup lang="ts">
   import { reactive, ref } from 'vue'
   import { useVuelidate } from '@vuelidate/core'
-  import { required, minLength } from '@vuelidate/validators'
+  import { required, minLength, helpers } from '@vuelidate/validators'
 
   const formData = reactive({
     username: '',
@@ -77,8 +77,16 @@
   })
 
   const rules = {
-    username: { required },
-    password: { required, minLength: minLength(8) },
+    username: {
+      required: helpers.withMessage('username cannot be empty', required),
+    },
+    password: {
+      required: helpers.withMessage('password cannot be empty', required),
+      minLength: helpers.withMessage(
+        'password should be at least 8 characters long',
+        minLength(8)
+      ),
+    },
   }
 
   const v$ = useVuelidate(rules, formData)
