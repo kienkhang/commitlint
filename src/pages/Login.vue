@@ -106,3 +106,8 @@
   let rememberMe = ref(false)
 </script>
 <style scoped></style>
+
+<route lang="yaml">
+meta:
+  layout: 'auth'
+</route>
