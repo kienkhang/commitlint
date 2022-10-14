@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="w-800 h-440 shadow-2xl block relative">
+    <div
+      :style="{ width: 800 + 'px', height: 400 + 'px' }"
+      class="shadow-2xl block relative"
+    >
       <div
         class="object-cover w-1/2 h-full flex justify-center items-center absolute"
       >
@@ -10,17 +13,19 @@
           alt="image"
         />
       </div>
-      <form class="p-10 w-1/2 block absolute form-right">
+      <form class="p-10 w-1/2 block absolute top-0 right-0">
         <p class="font-semibold text-lg mb-7">Login</p>
         <input
-          class="mb-8 w-full h-10 outline-none b-b-1 border-b-slate-500"
+          :style="{ borderBottomWidth: 1 + 'px' }"
+          class="mb-8 w-full h-10 outline-none border-b-slate-500"
           placeholder="Username"
           id="username"
           v-model="username"
         />
         <input
           type="password"
-          class="mb-8 w-full h-10 outline-none b-b-1 border-b-slate-500"
+          :style="{ borderBottomWidth: 1 + 'px' }"
+          class="mb-8 w-full h-10 outline-none border-b-slate-500"
           placeholder="Password"
           id="password"
           v-model="password"
@@ -52,18 +57,4 @@
     alert(username.value + ' ' + password.value + ' ' + rememberMe.value)
   }
 </script>
-<style scoped>
-  .w-800 {
-    width: 800px;
-  }
-  .h-440 {
-    height: 440px;
-  }
-  .form-right {
-    top: 0;
-    right: 0;
-  }
-  .b-b-1 {
-    border-bottom-width: 1px;
-  }
-</style>
+<style scoped></style>
