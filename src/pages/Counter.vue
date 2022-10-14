@@ -2,37 +2,37 @@
   <div class="w-[500px] h-[300px] box-border bg-gray-900 p-3">
     <p class="font-medium text-lg text-white">Count : {{ count }}</p>
     <button
-      class="px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
+      class="btn1 px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
       @click="increment"
     >
       Increment
     </button>
     <button
-      class="px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
+      class="btn2 px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
       @click="decrement"
     >
       Decrement
     </button>
     <button
-      class="px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
+      class="btn3 px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
       @click="incrementValue"
     >
       Increment (+5)
     </button>
     <button
-      class="px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
+      class="btn4 px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
       @click="decrementValue"
     >
       Decrement (+5)
     </button>
     <button
-      class="px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
+      class="btn5 px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
       @click="setValue"
     >
       Set (100)
     </button>
     <button
-      class="px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
+      class="btn6 px-4 py-1 bg-emerald-500 text-white outline-none border-none rounded-lg m-2 hover:bg-emerald-600 text-lg"
       @click="resetValue"
     >
       Reset
@@ -43,7 +43,7 @@
 <script setup lang="ts">
   import { useCounterStore } from '@/stores/Counter'
   import { storeToRefs } from 'pinia'
-  import { ref, watch } from 'vue'
+  import { watch } from 'vue'
 
   // const {
   //   count,
