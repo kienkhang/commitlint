@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div
-      :style="{ width: 800 + 'px', height: 400 + 'px' }"
-      class="shadow-2xl block relative"
-    >
+    <div class="w-[800px] h-[400px] shadow-2xl block relative">
       <div
         class="object-cover w-1/2 h-full flex justify-center items-center absolute"
       >
@@ -16,16 +13,14 @@
       <form class="p-10 w-1/2 block absolute top-0 right-0">
         <p class="font-semibold text-lg mb-7">Login</p>
         <input
-          :style="{ borderBottomWidth: 1 + 'px' }"
-          class="mb-8 w-full h-10 outline-none border-b-slate-500"
+          class="border-b-[1px] mb-8 w-full h-10 outline-none border-b-slate-500"
           placeholder="Username"
           id="username"
           v-model="username"
         />
         <input
           type="password"
-          :style="{ borderBottomWidth: 1 + 'px' }"
-          class="mb-8 w-full h-10 outline-none border-b-slate-500"
+          class="border-b-[1px] mb-8 w-full h-10 outline-none border-b-slate-500"
           placeholder="Password"
           id="password"
           v-model="password"
