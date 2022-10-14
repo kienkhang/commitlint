@@ -25,7 +25,8 @@
           />
           <!-- <span v-if="v$.username.$error == false" class="block"> </span> -->
           <span
-            class="block text-red-700 font-semibold"
+            id="err-username"
+            class="err-user block text-red-700 font-semibold"
             v-for="error in v$.username.$errors"
             >{{ error.$message }}</span
           >
@@ -44,6 +45,7 @@
           />
 
           <span
+            id="err-password"
             class="mb-5 block text-red-700 font-semibold"
             v-for="error in v$.password.$errors"
             >{{ error.$message }}</span
@@ -55,6 +57,7 @@
           <div class="ml-3 opacity-70">Remember me</div>
         </div>
         <button
+          id="btn-submit"
           class="px-7 text-white drop-shadow-md py-2 bg-green-600 rounded"
           @click="submitForm($event)"
           :disabled="!v$"
@@ -97,7 +100,7 @@
     if (isFormCorrect) {
       alert('submit')
     }
-    console.log({ isFormCorrect })
+    // console.log({ isFormCorrect })
   }
 
   let rememberMe = ref(false)
