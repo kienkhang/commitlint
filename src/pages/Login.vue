@@ -94,7 +94,7 @@
 
   const v$ = useVuelidate(rules, formData)
 
-  const submitForm = async (event) => {
+  const submitForm = async (event: Event) => {
     event.preventDefault()
     const isFormCorrect = await v$.value.$validate()
     if (isFormCorrect) {
